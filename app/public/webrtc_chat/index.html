@@ -1,0 +1,99 @@
+<!DOCTYPE><html><head>
+
+	<title>Xirsys XSDK: WebRTC Example</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style_webrtc.css"></link>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+	<!-- XIRSYS -->
+    <script src="../lib/xirsys-ice.js"></script>
+    <script src="../lib/xirsys-signal.js"></script>
+	<script src="../lib/xirsys-p2p.js"></script>
+	
+	<script src="js/main.js"></script>
+
+</head><body>
+
+	<div id="xsdk-video-call">
+		<section class="vertical-bar">
+			<!-- 
+			User Management UI 
+			-->
+			<div id="userInfo">
+				<h1 class="title-text" id="username-label">Username</h1>
+				<div class="box">
+					<div id="log-out" class="menu-icon-btns sign-out">
+						<text>LOGOUT</text>
+					</div>
+					<div id="call-peer" class="menu-icon-btns start-call">
+						<text>CALL</text>
+					</div>
+					<div id="hang-up" class="menu-icon-btns end-call">
+						<text>Hang Up</text>
+					</div>
+				</div>
+				<div id="hideColumn" class="hide-btn"></div>
+			</div>
+			
+			<div id="peers">
+				<!-- Peers List -->
+			</div>
+
+		</section>
+		
+		<div id="right-pane">
+
+			<!-- Video to Video Window -->
+			<section class="major-box fb-col-item hide-vid">
+				<!-- Remote User Video -->
+				<video id="remote-video" autoplay muted playsinline></video>
+				<!-- Local User Video -->
+				<section class="minor-box box-standby">
+					<video id="local-video" autoplay muted playsinline></video>
+				</section>
+				<!-- Remote Username Label and Hangup Button -->
+				<div id="remote-username">
+					<div id="hang-up" class="rounded-btn end-call-wt"></div>
+					<h1 class="title-text">No Caller</h1>
+				</div>
+				<!-- Expand and Chat buttons for P2P chat -->
+				<div id="video-menu">
+					<div id="remote-full-screen" class="rounded-btn expand remote-fs-unselected"></div>
+					<div>
+						<div id="chat-alert-icon" class="alert-sm"></div>
+						<div id="chat-btn" class="rounded-btn chat-on"></div>
+					</div>
+				</div>
+				<!-- Company Logo -->
+				<div id="co-logo" class="brand-logo"></div>
+				<div id="showColumn" class="hide-btn"></div>
+			</section>
+
+			<!-- CHAT -->
+			<section id="chatHistory" class="horizontal-bar fb-col-item">
+				<div id="messages">
+					<!-- Display user messages history -->
+				</div>
+			</section>
+
+			<!-- Sends user messages -->
+			<form id="sendMessage" class="message">
+				<input type="text" id="message" autocomplete="off" placeholder="Enter chat text here" />
+				<button id="submit-btn" type="submit"></button>
+			</form>
+		</div>
+
+		<!-- Login UI -->
+		<section class="cover">
+			<form id="login">
+				<h1 id="heading">Welcome</h1>
+				<input id="username" type="text" placeholder="Enter your name" />
+				<button id="login-btn" type="submit">CONNECT</button>
+			</form>
+		</section>
+		
+	</div>
+
+
+</body></html>
+

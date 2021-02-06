@@ -1,0 +1,51 @@
+<!DOCTYPE><html><head>
+
+	<title>Xirsys Examples - Xirsys Group Video Chat</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+
+    <!-- <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script> -->
+
+</head><body>
+
+	<section class="jumbotron">
+		<h1>Xirsys Group Video Chat Example</h1>
+		<p>Uses Xirsys ICE service to create a group video chat.</p>
+	</section>
+
+	<div class="container">
+
+		<section id="share-view" class="row">
+			<h3 id="share-title">Copy and Share this URL:</h3>
+			<div id="callIDView" class="input-group col-xs-12">
+				<input id="callID" type="text" class="form-control" aria-label="..." readonly>
+				<div class="input-group-btn">
+					<span id="isTURN" class="input-group-addon">
+						<input id="isTURNcb" type="checkbox" aria-label="...">
+						<label for="isTURN"> Force TURN</label>
+					</span>
+				</div>
+			</div>
+		</section>
+
+		<section id="camBox" class="row">
+			<div id="local-video" class="vid-view col-xs-12">
+				<video class="vid-obj" autoplay muted playsinline></video>
+			</div>
+		</section>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+	crossorigin="anonymous"></script>
+	<!-- XIRSYS -->
+    <script src="../lib/xirsys-ice.js"></script>
+    <script src="../lib/xirsys-signal.js"></script>
+    <script src="../lib/xirsys-p2group.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body></html>
+
