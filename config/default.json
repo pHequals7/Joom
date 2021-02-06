@@ -1,0 +1,43 @@
+{
+  "xirsys": {
+    "gateway": "global.xirsys.net",
+    "gatewayTimeout": 6000,
+    "info": {
+      "ident": "iitmvchat2021",
+      "secret": "620c02da-65f3-11eb-b729-0242ac150003",
+      "channel": "MyFirstApp"
+    },
+    "allowedServices": ["/_token", "/_host", "/_data", "/_ns", "/_turn"],
+    "overrideAllowedChannel": false,
+    "gateways": [
+      "ws.xirsys.com",
+      "us.xirsys.com",
+      "es.xirsys.com",
+      "tk.xirsys.com",
+      "bs.xirsys.com",
+      "sh.xirsys.com",
+      "ss.xirsys.com",
+      "ms.xirsys.com",
+      "to.xirsys.com",
+      "sp.xirsys.com"
+    ],
+    "fallbackIceServers": [{
+      "urls": [
+        "stun:stun.l.google.com:19305",
+        "stun:stun1.l.google.com:19305",
+        "stun:stun2.l.google.com:19305",
+        "stun:stun3.l.google.com:19305",
+        "stun:stun4.l.google.com:19305",
+        "stun:stun.services.mozilla.com"
+      ]
+    }]
+  },
+  "host":{
+    "httpport": 3443,
+    "httpsport": 3080
+  },
+  "maxmind": {
+    "db": "hosted"
+  }
+}
+
